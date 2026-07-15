@@ -6,27 +6,18 @@
 }
 
 :root {
-   
     --primary-color: #0071e3;
-   
     --secondary-color: #0052cc;
-   
     --accent-green: #34c759;
-  
     --accent-purple: #5856d6;
-   
 
     --background: #ffffff;
-   
     --background-alt: #f5f5f7;
-    
+    --background-alt-2: #fafafa;
     --white: #ffffff;
     --text-color: #1d1d1f;
-    
     --light-text: #86868b;
-  
     --border-color: #d2d2d7;
-    
 
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,14 +38,14 @@ body {
 .bento-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 50px;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -63,23 +54,23 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0.75rem 40px;
+    padding: 1rem 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
     color: var(--text-color);
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 3rem;
+    gap: 3.5rem;
 }
 
 .nav-link {
@@ -87,7 +78,7 @@ body {
     text-decoration: none;
     transition: var(--transition);
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     letter-spacing: -0.3px;
 }
 
@@ -110,11 +101,15 @@ body {
     border-radius: 1px;
 }
 
-/* Hero Section */
+/* Hero Section - MASSIVE */
 .hero-section {
-    padding: 140px 40px 100px;
-    background-color: var(--background);
+    padding: 200px 50px 180px;
+    background: linear-gradient(180deg, var(--background) 0%, var(--background-alt) 100%);
     text-align: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-bento {
@@ -124,45 +119,49 @@ body {
 }
 
 .kinetic-title {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    font-weight: 800;
-    line-height: 1.05;
-    letter-spacing: -2px;
-    margin-bottom: 1.5rem;
+    font-size: clamp(4rem, 12vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .highlight-text {
-    color: #0071e3;
-    font-weight: 800;
+    color: var(--primary-color);
+    font-weight: 900;
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--light-text);
     font-weight: 400;
     letter-spacing: -0.3px;
+    margin-bottom: 2rem;
 }
 
 .hero-accent {
-    width: 80px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background: var(--primary-color);
-    margin: 2rem auto 0;
-    border-radius: 1.5px;
+    margin: 2rem auto;
+    border-radius: 2px;
 }
 
 /* Section Titles */
 .section-title {
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-size: clamp(2.5rem, 7vw, 4rem);
     font-weight: 800;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     color: var(--text-color);
-    letter-spacing: -1.5px;
+    letter-spacing: -2px;
 }
 
 /* Bento Section */
 .bento-section {
-    padding: 120px 40px;
+    padding: 180px 50px;
     background-color: var(--background);
 }
 
@@ -171,23 +170,24 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: auto;
-    gap: 1.2rem;
-    margin-bottom: 4rem;
+    gap: 1.5rem;
+    margin-bottom: 6rem;
 }
 
 .bento-tile {
     background: var(--background-alt);
-    border-radius: 20px;
-    padding: 2.5rem;
+    border-radius: 24px;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     transition: var(--transition-slow);
     border: 1px solid var(--border-color);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    min-height: 320px;
 }
 
 .bento-tile::before {
@@ -197,15 +197,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(112, 111, 211, 0.02) 0%, transparent 100%);
+    background: linear-gradient(135deg, rgba(0, 113, 227, 0.02) 0%, transparent 100%);
     opacity: 0;
     transition: var(--transition-slow);
     pointer-events: none;
 }
 
 .bento-tile:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+    transform: translateY(-16px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
     border-color: var(--primary-color);
 }
 
@@ -217,7 +217,8 @@ body {
 .bento-tile.large {
     grid-column: span 2;
     grid-row: span 2;
-    padding: 3rem;
+    padding: 3.5rem;
+    min-height: auto;
 }
 
 .bento-tile.medium {
@@ -236,18 +237,19 @@ body {
 }
 
 .project-tile h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    margin-bottom: 1.2rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    line-height: 1.1;
 }
 
 .project-tile p {
     color: var(--light-text);
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
     font-weight: 400;
 }
 
@@ -255,23 +257,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
     border-top: 1px solid var(--border-color);
 }
 
 .metric-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--light-text);
     text-transform: uppercase;
-    letter-spacing: 0.8px;
-    font-weight: 600;
+    letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .metric-value {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Tile Content & Footer */
@@ -281,40 +283,41 @@ body {
 
 .tile-footer {
     display: flex;
-    gap: 0.8rem;
-    margin-top: 2rem;
-    padding-top: 2rem;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
     border-top: 1px solid var(--border-color);
 }
 
 .tile-link {
     flex: 1;
-    padding: 0.9rem 1.2rem;
+    padding: 1rem 1.5rem;
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     text-decoration: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.95rem;
     transition: var(--transition);
     letter-spacing: -0.3px;
 }
 
 .tile-link:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 113, 227, 0.3);
 }
 
 /* Special Tile Colors */
 .github-tile {
-    background: #1d1d1f;
+    background: var(--text-color);
     color: var(--white);
 }
 
 .github-tile h3 {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .github-tile p {
@@ -322,65 +325,66 @@ body {
 }
 
 .github-username {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin: 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0.8rem 0;
 }
 
 .github-stat {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     opacity: 0.8;
 }
 
 .resume-tile {
-    background: #34c759;
+    background: linear-gradient(135deg, var(--accent-green) 0%, #30b545 100%);
     color: var(--white);
 }
 
 .resume-tile h3 {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .resume-tile p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .resume-location {
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    font-weight: 500;
 }
 
 .linkedin-tile {
-    background: #0071e3;
+    background: var(--primary-color);
     color: var(--white);
 }
 
 .linkedin-tile h3 {
     color: var(--white);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
 .linkedin-tile p {
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Toolbox Section */
 .toolbox-section {
-    padding: 120px 40px;
+    padding: 180px 50px;
     background-color: var(--background-alt);
 }
 
 .tools-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
 }
 
 .tool-card {
     background: var(--white);
-    padding: 2.5rem 1.5rem;
-    border-radius: 18px;
+    padding: 3rem 2rem;
+    border-radius: 20px;
     text-align: center;
     transition: var(--transition-slow);
     border: 1px solid var(--border-color);
@@ -388,53 +392,54 @@ body {
 }
 
 .tool-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-12px);
     border-color: var(--primary-color);
-    box-shadow: 0 12px 28px rgba(112, 111, 211, 0.12);
+    box-shadow: 0 16px 32px rgba(0, 113, 227, 0.15);
 }
 
 .tool-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .tool-card p {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-color);
-    font-size: 0.95rem;
+    font-size: 1rem;
     letter-spacing: -0.3px;
 }
 
 /* About Section */
 .about-section {
-    padding: 120px 40px;
+    padding: 180px 50px;
     background-color: var(--background);
 }
 
 .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 3.5rem;
 }
 
 .about-tile {
     background: var(--background-alt);
-    padding: 3rem;
-    border-radius: 18px;
+    padding: 3.5rem;
+    border-radius: 20px;
     border: 1px solid var(--border-color);
     transition: var(--transition-slow);
 }
 
 .about-tile:hover {
     border-color: var(--primary-color);
-    box-shadow: 0 12px 28px rgba(112, 111, 211, 0.1);
+    box-shadow: 0 16px 32px rgba(0, 113, 227, 0.1);
+    transform: translateY(-8px);
 }
 
 .about-tile h3 {
     color: var(--text-color);
     margin-bottom: 1.5rem;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.6rem;
+    font-weight: 800;
     letter-spacing: -0.5px;
 }
 
@@ -442,38 +447,40 @@ body {
     color: var(--light-text);
     line-height: 1.8;
     font-weight: 400;
+    font-size: 1.05rem;
 }
 
 /* Contact Section */
 .contact-section {
-    padding: 120px 40px;
+    padding: 180px 50px;
     background-color: var(--background-alt);
 }
 
 .contact-intro {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--light-text);
-    margin-bottom: 3rem;
-    max-width: 600px;
+    margin-bottom: 3.5rem;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     font-weight: 400;
+    line-height: 1.7;
 }
 
 .contact-form {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-    padding: 1.1rem;
+    padding: 1.2rem 1.5rem;
     border: 1px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 14px;
     font-size: 1rem;
     font-family: inherit;
     transition: var(--transition);
@@ -485,16 +492,16 @@ body {
 .contact-form textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(112, 111, 211, 0.08);
+    box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.1);
 }
 
 .cta-button {
     background-color: var(--primary-color);
     color: var(--white);
-    padding: 1.2rem 2.5rem;
+    padding: 1.3rem 3rem;
     border: none;
-    border-radius: 12px;
-    font-size: 1rem;
+    border-radius: 14px;
+    font-size: 1.05rem;
     font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
@@ -503,30 +510,31 @@ body {
 
 .cta-button:hover {
     background-color: var(--secondary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(112, 111, 211, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(0, 113, 227, 0.3);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--text-color);
-    color: var(--white);
-    padding: 4rem 40px 1.5rem;
+    background-color: var(--background-alt);
+    color: var(--text-color);
+    padding: 5rem 50px 2rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
 }
 
 .footer-section h3 {
     margin-bottom: 1.5rem;
-    color: var(--white);
-    font-weight: 700;
+    color: var(--text-color);
+    font-weight: 800;
     font-size: 1rem;
     letter-spacing: -0.3px;
 }
@@ -536,11 +544,12 @@ body {
 }
 
 .footer-section a {
-    color: #a1a1a6;
+    color: var(--light-text);
     text-decoration: none;
     transition: var(--transition);
-    font-size: 0.9rem;
-    line-height: 1.8;
+    font-size: 0.95rem;
+    line-height: 2;
+    font-weight: 400;
 }
 
 .footer-section a:hover {
@@ -548,15 +557,16 @@ body {
 }
 
 .footer-section p {
-    color: #a1a1a6;
-    font-size: 0.9rem;
+    color: var(--light-text);
+    font-size: 0.95rem;
+    line-height: 1.8;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid #424245;
-    color: #a1a1a6;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--light-text);
     max-width: 1200px;
     margin: 0 auto;
     font-size: 0.9rem;
@@ -565,16 +575,30 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .bento-container {
-        padding: 0 30px;
+        padding: 0 40px;
     }
 
     .nav-container {
-        padding: 0.75rem 30px;
+        padding: 0.75rem 40px;
+    }
+
+    .hero-section {
+        padding: 140px 40px 100px;
+        min-height: 70vh;
+    }
+
+    .kinetic-title {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+        margin-bottom: 4rem;
     }
 
     .bento-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
+        gap: 1.2rem;
     }
 
     .bento-tile.large {
@@ -586,9 +610,11 @@ body {
         grid-column: span 1;
     }
 
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 3rem;
+    .bento-section,
+    .toolbox-section,
+    .about-section,
+    .contact-section {
+        padding: 120px 40px;
     }
 }
 
@@ -613,6 +639,28 @@ body {
         transform: rotate(45deg) translate(-6px, -6px);
     }
 
+    .bento-container {
+        padding: 0 30px;
+    }
+
+    .nav-container {
+        padding: 0.75rem 30px;
+    }
+
+    .hero-section {
+        padding: 100px 30px 80px;
+        min-height: 60vh;
+    }
+
+    .kinetic-title {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
     .bento-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -626,14 +674,7 @@ body {
 
     .section-title {
         font-size: 2rem;
-    }
-
-    .kinetic-title {
-        font-size: 2rem;
-    }
-
-    .hero-section {
-        padding: 80px 30px 60px;
+        margin-bottom: 2.5rem;
     }
 
     .bento-section,
@@ -643,23 +684,43 @@ body {
         padding: 80px 30px;
     }
 
-    .bento-container {
-        padding: 0 30px;
+    .about-grid {
+        gap: 2rem;
+    }
+
+    .footer {
+        padding: 3rem 30px 1.5rem;
+    }
+
+    .footer-content {
+        gap: 2.5rem;
+        margin-bottom: 2.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    .bento-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .bento-container {
+        padding: 0 20px;
     }
 
-    .bento-tile {
-        padding: 1.8rem;
+    .nav-container {
+        padding: 0.75rem 20px;
     }
 
-    .bento-tile.large {
-        padding: 1.8rem;
+    .hero-section {
+        padding: 80px 20px 60px;
+        min-height: auto;
+    }
+
+    .kinetic-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .section-title {
@@ -667,28 +728,41 @@ body {
         margin-bottom: 2rem;
     }
 
-    .kinetic-title {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .bento-tile {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .bento-tile.large {
+        padding: 2rem;
+    }
+
+    .project-tile h3 {
+        font-size: 1.4rem;
+    }
+
+    .project-tile p {
+        font-size: 1rem;
     }
 
     .tools-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 
-    .nav-container {
-        padding: 0.75rem 20px;
+    .tool-card {
+        padding: 2rem 1rem;
     }
 
-    .logo {
-        font-size: 1.1rem;
+    .tool-icon {
+        font-size: 2.5rem;
     }
 
-    .bento-container {
-        padding: 0 20px;
-    }
-
-    .hero-section,
     .bento-section,
     .toolbox-section,
     .about-section,
@@ -697,10 +771,25 @@ body {
     }
 
     .about-grid {
+        grid-template-columns: 1fr;
         gap: 1.5rem;
     }
 
     .about-tile {
         padding: 2rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .footer {
+        padding: 2rem 20px 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 2rem;
     }
 }
