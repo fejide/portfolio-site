@@ -1,0 +1,16 @@
+
+/* ==================================================
+   Global CSS Reset
+
+   Purpose:
+   - Removes default browser margins and padding.
+   - Applies consistent box sizing across all elements.
+   - Creates a predictable layout foundation for the site.
+================================================== */
+* {  
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
