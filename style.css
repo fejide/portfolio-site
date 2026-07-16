@@ -792,15 +792,15 @@ textarea:focus-visible {
     grid-column: 1 / -1;
 
     width: 100%;
-    max-width: 1100px;
+    max-width: 1240px;
 
-    margin: 54px auto 80px;
-    padding: 0 26px;
+    margin: 64px auto 100px;
+    padding: 0 32px;
 
     display: grid;
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
-    gap: 16px;
+    gap: 24px;
 }
 
 
@@ -810,16 +810,16 @@ textarea:focus-visible {
 
 .quick-link-card {
     min-width: 0;
-    min-height: 260px;
+    min-height: 290px;
 
-    padding: 32px;
+    padding: 38px;
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
     border: 1px solid var(--border-color);
-    border-radius: 24px;
+    border-radius: 26px;
 
     background-color: var(--background-alt);
 
@@ -845,21 +845,21 @@ textarea:focus-visible {
 }
 
 .quick-link-card h4 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.85rem;
 
     color: var(--text-color);
 
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 800;
     line-height: 1.1;
-    letter-spacing: -0.8px;
+    letter-spacing: -0.9px;
 }
 
 .quick-link-card p {
     color: var(--light-text);
 
-    font-size: 0.98rem;
-    line-height: 1.45;
+    font-size: 1.02rem;
+    line-height: 1.5;
 }
 
 .quick-link-card .username {
@@ -879,8 +879,10 @@ textarea:focus-visible {
 ========================================================= */
 
 .quick-link-btn {
+    min-width: 140px;
+
     margin-top: auto;
-    padding: 0.72rem 1.3rem;
+    padding: 0.78rem 1.45rem;
 
     display: inline-flex;
     justify-content: center;
@@ -892,7 +894,7 @@ textarea:focus-visible {
     border: 1px solid var(--primary-color);
     border-radius: 999px;
 
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 600;
     line-height: 1;
     text-decoration: none;
@@ -934,7 +936,7 @@ textarea:focus-visible {
    RESUME QUICK LINK CARD
 ========================================================= */
 
-.resume-card {
+/* .resume-card {
     color: var(--white);
 
     background:
@@ -943,18 +945,37 @@ textarea:focus-visible {
             #22963c);
 
     border-color: transparent;
+} */
+
+.resume-card {
+    background:
+        linear-gradient(145deg,
+            #ffffff,
+            #f6f8fb);
+
+    border: 1px solid rgba(0, 113, 227, 0.18);
+
+    color: var(--text-color);
 }
 
-.resume-card h4,
+/* .resume-card h4,
 .resume-card p {
     color: var(--white);
+} */
+
+.resume-card h4 {
+    color: var(--text-color);
+}
+
+.resume-card p {
+    color: var(--light-text);
 }
 
 .resume-card p {
     opacity: 0.9;
 }
 
-.resume-card .quick-link-btn {
+/* .resume-card .quick-link-btn {
     color: #1d7a33;
     background-color: var(--white);
     border-color: var(--white);
@@ -968,8 +989,17 @@ textarea:focus-visible {
 
     border-color:
         rgba(255, 255, 255, 0.9);
+} */
+.resume-card .quick-link-btn {
+    color: white;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
+.resume-card .quick-link-btn:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+}
 
 /* =========================================================
    LINKEDIN QUICK LINK CARD
@@ -1716,11 +1746,20 @@ textarea:focus-visible {
         height: 310px;
     }
 
-    .quick-links-section {
-        margin-bottom: 70px;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
+   .quick-links-section {
+       max-width: 1000px;
+
+       margin-bottom: 80px;
+       padding-left: 20px;
+       padding-right: 20px;
+
+       gap: 18px;
+   }
+
+   .quick-link-card {
+       min-height: 270px;
+       padding: 32px;
+   }
 
 
     /* Toolbox */
@@ -1985,9 +2024,10 @@ textarea:focus-visible {
         padding-right: 12px;
     }
 
-    .quick-link-card {
-        min-height: 225px;
-    }
+        .quick-link-card {
+            min-height: 240px;
+            padding: 30px;
+        }
 
 
     /* Toolbox */
