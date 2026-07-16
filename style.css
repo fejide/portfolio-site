@@ -662,10 +662,36 @@ textarea:focus-visible {
 
 
 /* =========================================================
+   PROJECT CARD LAYOUT
+========================================================= */
+
+/*
+   Net Worth Calculator and Affordability Calculator
+   occupy matching columns on the first row.
+*/
+
+.project-net-worth,
+.project-affordability {
+    grid-column: span 1;
+    min-height: 640px;
+}
+
+
+/*
+   Investment Tracker spans the entire second row.
+*/
+
+.project-investment {
+    grid-column: 1 / -1;
+    min-height: 640px;
+}
+
+
+/* =========================================================
    PROJECT 1 — NET WORTH CALCULATOR
 ========================================================= */
 
-.projects-section>.project-hero:nth-of-type(1) {
+.project-net-worth {
     background:
         radial-gradient(circle at 50% 100%,
             rgba(0, 113, 227, 0.16),
@@ -675,12 +701,21 @@ textarea:focus-visible {
             #edf4fb 100%);
 }
 
+.project-net-worth .placeholder-visual {
+    width: min(88%, 540px);
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.98),
+            rgba(220, 228, 239, 0.9));
+}
+
 
 /* =========================================================
    PROJECT 2 — AFFORDABILITY CALCULATOR
 ========================================================= */
 
-.projects-section>.project-hero:nth-of-type(2) {
+.project-affordability {
     background:
         radial-gradient(circle at 50% 100%,
             rgba(52, 199, 89, 0.2),
@@ -690,7 +725,8 @@ textarea:focus-visible {
             #edf8ef 100%);
 }
 
-.projects-section>.project-hero:nth-of-type(2) .placeholder-visual {
+.project-affordability .placeholder-visual {
+    width: min(88%, 540px);
 
     background:
         linear-gradient(145deg,
@@ -703,7 +739,7 @@ textarea:focus-visible {
    PROJECT 3 — INVESTMENT TRACKER
 ========================================================= */
 
-.projects-section>.project-hero:nth-of-type(3) {
+.project-investment {
     background:
         radial-gradient(circle at 50% 100%,
             rgba(88, 86, 214, 0.25),
@@ -713,17 +749,20 @@ textarea:focus-visible {
             #1d2028 100%);
 }
 
-.projects-section>.project-hero:nth-of-type(3) .project-hero-content h3 {
+.project-investment .project-hero-content {
+    max-width: 760px;
+}
 
+.project-investment .project-hero-content h3 {
     color: var(--white);
 }
 
-.projects-section>.project-hero:nth-of-type(3) .project-hero-content p {
-
+.project-investment .project-hero-content p {
     color: #b7b7bd;
 }
 
-.projects-section>.project-hero:nth-of-type(3) .placeholder-visual {
+.project-investment .placeholder-visual {
+    width: min(72%, 820px);
 
     background:
         linear-gradient(145deg,
@@ -738,19 +777,9 @@ textarea:focus-visible {
         0 30px 70px rgba(0, 0, 0, 0.35);
 }
 
-.projects-section>.project-hero:nth-of-type(3) .placeholder-visual::before {
-
+.project-investment .placeholder-visual::before {
     background-color:
         rgba(255, 255, 255, 0.15);
-}
-
-
-/* =========================================================
-   PROJECT 3 SPANS THE FULL SECOND ROW
-========================================================= */
-
-.projects-section>.project-hero:nth-of-type(3) {
-    grid-column: 1 / -1;
 }
 
 
@@ -1654,6 +1683,20 @@ textarea:focus-visible {
         padding: 48px 30px 0;
     }
 
+        .project-net-worth,
+        .project-affordability,
+        .project-investment {
+            min-height: 590px;
+        }
+    
+        .project-investment {
+            grid-column: 1 / -1;
+        }
+    
+        .project-investment .placeholder-visual {
+            width: min(80%, 720px);
+        }
+
     .project-hero-content h3 {
         font-size: clamp(2rem, 4vw, 2.85rem);
         letter-spacing: -1.8px;
@@ -1921,9 +1964,15 @@ textarea:focus-visible {
         height: 295px;
     }
 
-    .projects-section>.project-hero:nth-of-type(3) {
-        grid-column: auto;
-    }
+        .project-net-worth,
+        .project-affordability,
+        .project-investment {
+            grid-column: auto;
+        }
+    
+        .project-investment .placeholder-visual {
+            width: min(94%, 500px);
+        }
 
     .quick-links-section {
         grid-template-columns: 1fr;
